@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "postinstall": "cd client && yarn install"
+    "postinstall": "cd client && yarn install",
+    "start": "foreman start -f Procfile.dev"
   },
 
   "name": "tag_along",

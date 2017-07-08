@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip_id: 1
+  lat: 9.99
+  lon: 9.99
+
+two:
+  trip_id: 1
+  lat: 9.99
+  lon: 9.99
