@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170708210659) do
     t.integer "trip_id", null: false
     t.decimal "lat", precision: 10, scale: 6, null: false
     t.decimal "lon", precision: 10, scale: 6, null: false
+    t.datetime "captured_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trip_id"], name: "index_checkins_on_trip_id"

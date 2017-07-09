@@ -4,6 +4,7 @@ class CreateCheckins < ActiveRecord::Migration[5.1]
       t.integer :trip_id, null: false
       t.decimal :lat, null: false, precision: 10, scale: 6
       t.decimal :lon, null: false, precision: 10, scale: 6
+      t.datetime :captured_at, null: false
 
       t.timestamps
     end
