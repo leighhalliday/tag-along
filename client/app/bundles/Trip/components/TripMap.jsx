@@ -19,9 +19,9 @@ export default class TripStore extends React.Component {
 
     this.state = {
       viewport: {
-        latitude: 43.6493023,
-        longitude: -79.4946319,
-        zoom: 11,
+        latitude: 43.6532,
+        longitude: -79.3832,
+        zoom: 16,
         bearing: 0,
         pitch: 50,
         width: window.innerWidth,
@@ -56,8 +56,8 @@ export default class TripStore extends React.Component {
   viewport = () => {
     const {TripStore} = this.props;
 
-    let latitude = 43.6493023;
-    let longitude = -79.4946319;
+    let latitude = 43.6532;
+    let longitude = -79.3832;
 
     if (TripStore.checkins.length > 0) {
       const last = TripStore.checkins[TripStore.checkins.length - 1];

@@ -33,12 +33,11 @@ class TripStore {
       lon: parseFloat(checkin.lon),
       captured_at: parseInt(checkin.captured_at)
     });
+    this.checkins = this.checkins.slice(-25);
   }
 
   @action postCheckin = () => {
     navigator.geolocation.getCurrentPosition(position => {
-      console.log(position);
-
       this.tripApi.postCheckin(
         this.trip.owner_uuid,
         position.coords.latitude,
@@ -48,7 +47,7 @@ class TripStore {
 
       setTimeout(() => {
         this.postCheckin();
-      }, 2000);
+      }, 10000);
     });
   }
 }
