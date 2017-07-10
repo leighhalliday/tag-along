@@ -33,7 +33,7 @@ class TripStore {
       lon: parseFloat(checkin.lon),
       captured_at: parseInt(checkin.captured_at)
     });
-    this.checkins = this.checkins.slice(-25);
+    this.checkins = this.checkins.slice(-200);
   }
 
   @action postCheckin = () => {
