@@ -1,24 +1,9 @@
-# README
+# TagAlong
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Visit https://tag-along-app.herokuapp.com/ to view demo of realtime location mapping with the following technologies:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Rails w/ react_on_rails
+- ActionCable (websockets)
+- React
+- MobX
+- MapBox
