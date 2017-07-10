@@ -2,10 +2,10 @@ export default `
 .station:before {
   content: ' ';
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: red;
-  border-radius: 8px;
+  width: 10px;
+  height: 10px;
+  background: #18FFFF;
+  border-radius: 10px;
   margin: 0 8px;
 }
 .station {

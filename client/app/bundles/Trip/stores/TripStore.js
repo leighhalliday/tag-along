@@ -47,7 +47,7 @@ class TripStore {
 
       setTimeout(() => {
         this.postCheckin();
-      }, 10000);
+      }, 2000);
     });
   }
 }

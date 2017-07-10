@@ -5,7 +5,10 @@ class TripsController < ApplicationController
   end
 
   def create
-    trip = Trip.create(trip_params)
+    clean_old_trips
+
+    trip = Trip.create!(trip_params)
+
     render json: trip.to_json
   end
 
@@ -16,6 +19,10 @@ class TripsController < ApplicationController
   end
 
   private
+
+  def clean_old_trips
+    Trip.where('created_at < ?', 2.days.ago).delete_all
+  end
 
   def trip_params
     params.require(:trip).permit(:name)

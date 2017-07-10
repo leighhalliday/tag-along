@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import MapGL, {Marker} from 'react-map-gl';
+import moment from 'moment';
 
 // const token = process.env.MapboxAccessToken; // eslint-disable-line
 const token = 'pk.eyJ1IjoibGVpZ2hoYWxsaWRheSIsImEiOiJjajR2bzNhcHkweHdyMzJucnpodm5zc2h5In0.Vj2bGQOYqTTgDInlXD27Xg';
@@ -44,7 +45,7 @@ export default class TripStore extends React.Component {
   renderMarker = (checkin) => {
     return (
       <Marker key={checkin.captured_at} longitude={checkin.lon} latitude={checkin.lat} >
-        <div className="station"><span>{checkin.captured_at}</span></div>
+        <div className="station"><span>{moment(checkin.captured_at).format('MMMM Do YYYY, h:mm:ss a')}</span></div>
       </Marker>
     );
   }
