@@ -13,13 +13,27 @@ class TripStore {
     this.tripApi.createTrip(name).
       then(trip => {
         this.trip = trip;
+        this.tripApi.subscribeTrip(trip.viewer_uuid, data => {
+          console.log(data, 'socket data');
+        });
         this.postCheckin();
       });
   }
 
   @action postCheckin = () => {
     navigator.geolocation.getCurrentPosition(position => {
-      
+      console.log(position);
+
+      this.tripApi.postCheckin(
+        this.trip.owner_uuid,
+        position.coords.latitude,
+        position.coords.longitude,
+        position.timestamp
+      );
+
+      setTimeout(() => {
+        this.postCheckin();
+      }, 1000);
     });
   }
 }

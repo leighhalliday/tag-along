@@ -11,6 +11,7 @@
     "client/node_modules"
   ],
   "dependencies": {
+    "actioncable": "^5.1.2",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.3.2",
