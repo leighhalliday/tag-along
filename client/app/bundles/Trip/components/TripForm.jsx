@@ -11,6 +11,20 @@ export default class TripForm extends React.Component {
   }
 
   render() {
+    const {TripStore} = this.props;
+
+    if (TripStore.trip.name) {
+      return (
+        <section className="trip-form-container">
+          <span>
+            Tracking <strong>{TripStore.trip.name}</strong>,
+            share this link:
+            https://{window.location.host}/trips/{TripStore.trip.viewer_uuid}
+          </span>
+        </section>
+      )
+    }
+
     return (
       <section className="trip-form-container">
         <form onSubmit={e => this.handleSubmit(e)}>

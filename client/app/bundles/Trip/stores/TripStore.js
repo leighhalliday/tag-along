@@ -21,7 +21,11 @@ class TripStore {
   }
 
   @action recordCheckin = (checkin) => {
-    this.checkins.push(checkin);
+    this.checkins.push({
+      lat: parseFloat(checkin.lat),
+      lon: parseFloat(checkin.lon),
+      captured_at: parseInt(checkin.captured_at)
+    });
   }
 
   @action postCheckin = () => {
@@ -37,7 +41,7 @@ class TripStore {
 
       setTimeout(() => {
         this.postCheckin();
-      }, 10000);
+      }, 2000);
     });
   }
 }

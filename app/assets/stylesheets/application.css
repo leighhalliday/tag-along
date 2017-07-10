@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.trip-form-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+  padding: 15px;
+  background-color: yellow;
+}
+
+label {
+  margin-right: 15px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 0px;
+  margin-right: 15px;
+  border: 1px solid black;
+}
+
+button {
+  padding: 10px;
+  border-radius: 0px;
+  border: 1px solid black;
+}
