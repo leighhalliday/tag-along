@@ -10,7 +10,9 @@ class TripsController < ApplicationController
   end
 
   def show
-
+    trip = Trip.find_by!(viewer_uuid: params[:id])
+    @trip_props = trip.attributes
+    @trip_props.delete(:owner_uuid)
   end
 
   private

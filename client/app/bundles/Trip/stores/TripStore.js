@@ -9,6 +9,13 @@ class TripStore {
     this.tripApi = new TripApi();
   }
 
+  @action setTrip = (trip) => {
+    this.trip = trip;
+    this.tripApi.subscribeTrip(trip.viewer_uuid, checkin => {
+      this.recordCheckin(checkin)
+    });
+  }
+
   @action createTrip = (name) => {
     this.tripApi.createTrip(name).
       then(trip => {
