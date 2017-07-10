@@ -13,11 +13,15 @@ class TripStore {
     this.tripApi.createTrip(name).
       then(trip => {
         this.trip = trip;
-        this.tripApi.subscribeTrip(trip.viewer_uuid, data => {
-          console.log(data, 'socket data');
+        this.tripApi.subscribeTrip(trip.viewer_uuid, checkin => {
+          this.recordCheckin(checkin)
         });
         this.postCheckin();
       });
+  }
+
+  @action recordCheckin = (checkin) => {
+    this.checkins.push(checkin);
   }
 
   @action postCheckin = () => {
@@ -33,7 +37,7 @@ class TripStore {
 
       setTimeout(() => {
         this.postCheckin();
-      }, 1000);
+      }, 10000);
     });
   }
 }
