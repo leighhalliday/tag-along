@@ -17,7 +17,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem "webpacker", git: "https://github.com/shakacode/webpacker.git", branch: "issue-464-merge-webpacker-lite-into-webpacker"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -35,7 +35,7 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'react_on_rails', '~> 8.0', '>= 8.0.5'
+gem 'react_on_rails', '~> 9.0.0.beta.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,4 +58,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mini_racer', platforms: :ruby
-gem 'webpacker_lite'

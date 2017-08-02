@@ -31,7 +31,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-map-gl": ">=3.0.0-beta.1",
-    "react-on-rails": "8.0.5",
+    "react-on-rails": "9.0.0-beta.2",
     "webpack": "^2.3.3",
     "webpack-manifest-plugin": "^1.1.0"
   },
